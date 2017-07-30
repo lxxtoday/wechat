@@ -22,7 +22,7 @@ class FundamentalAPITest extends TestCase
         $result = $this->make()->clearQuota();
 
         $this->assertEquals('https://api.weixin.qq.com/cgi-bin/clear_quota', $result['api']);
-        $this->assertSame(['appid' => 'i-am-app-id'], $result['params']);
+        $this->assertEquals(['appid' => 'i-am-app-id'], $result['params']);
     }
 
     /**

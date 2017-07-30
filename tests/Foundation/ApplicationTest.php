@@ -88,7 +88,7 @@ class ApplicationTest extends TestCase
 
         $app->setProviders(['foo', 'bar']);
 
-        $this->assertSame(['foo', 'bar'], $app->getProviders());
+        $this->assertEquals(['foo', 'bar'], $app->getProviders());
     }
 
     public function testSetCustomAccessToken()
@@ -104,6 +104,6 @@ class ApplicationTest extends TestCase
 
         $app['access_token']->setToken('iamtokenhere');
 
-        $this->assertSame('iamtokenhere', $app['access_token']->getToken());
+        $this->assertEquals('iamtokenhere', $app['access_token']->getToken());
     }
 }

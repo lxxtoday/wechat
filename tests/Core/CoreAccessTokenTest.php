@@ -53,7 +53,6 @@ class CoreAccessTokenTest extends TestCase
         // non-cached
         $cache = \Mockery::mock(Cache::class, function ($mock) use ($cacheObj) {
             $mock->shouldReceive('fetch')->andReturnUsing(function ($cacheKey) {
-                return;
             });
 
             $mock->shouldReceive('save')->andReturnUsing(function ($key, $token, $expire) use ($cacheObj) {

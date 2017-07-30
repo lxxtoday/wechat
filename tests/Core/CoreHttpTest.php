@@ -227,7 +227,7 @@ namespace EasyWeChat\Tests\Core {
             $http = new Http();
             $http->setClient($httpClient);
             $http->request('http://overtrue.me/domain/action', 'GET');
-            $this->assertSame(1, $statistics['/domain/action']);
+            $this->assertEquals(1, $statistics['/domain/action']);
 
             Http::setDefaultOptions($oldDefaultOptions);
         }
